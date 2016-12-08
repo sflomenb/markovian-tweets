@@ -1,1 +1,3 @@
 *.o
+*.out
+level1-cpp/main
