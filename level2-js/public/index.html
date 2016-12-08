@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Angular JS Modules</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="mainApp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+</head>
+
+<body ng-app="mainApp" ng-controller="mainController">
+
+    <img src="https://bcdcideas.files.wordpress.com/2010/06/ninja_bird_red_circle.jpg" style="width:128px;height:128px;"></img>
+    <h1>Tweet Ninja</h1>
+    <div>
+        <form ng-submit="getTweet(accountID)">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="type twitter screen name" id="account_id" ng-model="accountID" type="text" class="validate" required="" aria-required="true">
+                    <label for="account_id">twitter screen name</label>
+                    <button class="btn waves-effect waves-light" type="submit"> GENERATE MARKOV TWEET
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+
+    <div>
+        <h5>TWEET FROM {{accountID}}:</h5>
+        <p>{{usertweet}}</p>
+    </div>
+    <br>
+
+    <div>
+    <h5>MARKOV TWEET FROM {{accountID}}:</h5>
+        {{markovTweet}}
+    </div>
+</body>
+
+</html>
