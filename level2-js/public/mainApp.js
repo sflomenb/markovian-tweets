@@ -10,7 +10,7 @@ function mainController($scope, $http) {
         $scope.accountID = accountID;
         $http({
             // url: "http://localhost:3000/tweet/" + accountID,
-            url: "https://cpeg476-markov-sflomenb.c9users.io/tweet/" + accountID,
+            url: "http://localhost:3000/tweet/" + accountID,
             method: "GET",
             // data: { account_id: '1' }
         }).then(function(data, status, headers, config) {
