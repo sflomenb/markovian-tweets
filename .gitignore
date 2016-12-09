@@ -1,3 +1,4 @@
 *.o
 *.out
 level1-cpp/main
+level2-js/node_modules
